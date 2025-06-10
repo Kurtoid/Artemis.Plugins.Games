@@ -30,23 +30,26 @@ namespace Artemis.Plugins.Games.RocketLeague
             DataModel.Player = data.Player;
             DataModel.Car = data.Car;
             DataModel.Status = data.Status;
-            
-            if (DataModel.Player == null && DataModel.Match != null)
-            {
-                DataModel.Match.MyTeam = null;
-                DataModel.Match.OpponentTeam = null;
-                return;
-            }
 
-            if (DataModel.Player.Team == 0)
-            {
-                DataModel.Match.MyTeam = DataModel.Match.Team_0;
-                DataModel.Match.OpponentTeam = DataModel.Match.Team_1;
-            }
-            else
-            {
-                DataModel.Match.MyTeam = DataModel.Match.Team_1;
-                DataModel.Match.OpponentTeam = DataModel.Match.Team_0;
+
+            if (DataModel.Match != null){
+                if (DataModel.Player == null)
+                {
+                    DataModel.Match.MyTeam = null;
+                    DataModel.Match.OpponentTeam = null;
+                    return;
+                }
+    
+                if (DataModel.Player.Team == 0)
+                {
+                    DataModel.Match.MyTeam = DataModel.Match.Team_0;
+                    DataModel.Match.OpponentTeam = DataModel.Match.Team_1;
+                }
+                else
+                {
+                    DataModel.Match.MyTeam = DataModel.Match.Team_1;
+                    DataModel.Match.OpponentTeam = DataModel.Match.Team_0;
+                }
             }
         }
 
