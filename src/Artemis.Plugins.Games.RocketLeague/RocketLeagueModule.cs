@@ -31,7 +31,7 @@ namespace Artemis.Plugins.Games.RocketLeague
             DataModel.Car = data.Car;
             DataModel.Status = data.Status;
             
-            if (DataModel.Player == null)
+            if (DataModel.Player == null && DataModel.Match != null)
             {
                 DataModel.Match.MyTeam = null;
                 DataModel.Match.OpponentTeam = null;
