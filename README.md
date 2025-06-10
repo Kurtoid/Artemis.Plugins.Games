@@ -29,3 +29,5 @@ Due to the volatine nature of the project right now, there is no documentation y
 4. Open ```<central folder>\Artemis\src\Artemis.sln``` and build with the default config
 5. Clone Artemis.Plugins.Games into  ```<central folder>\Artemis.Plugins.Games```
 6. Open ```<central folder>\Artemis.Plugins.Games\src\Artemis.Plugins.Games.sln``` and build with the default config
+
+<!-- edit to force rebuild -->
